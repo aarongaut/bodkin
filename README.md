@@ -25,9 +25,3 @@ Install using pip
 ```sh
 python3 -m pip install bodkin
 ```
-
-## From source
-
-```sh
-python3 -m pip install https://gitlab.com/samflam/bodkin.git
-```
