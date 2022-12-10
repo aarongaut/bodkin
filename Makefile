@@ -28,4 +28,10 @@ push: test
 
 tags: $(shell find bodkin -iname "*.py")
 	ctags $^
-.PHONY: tags
+
+clean:
+	rm -rf dist
+	rm -rf *.egg-info
+	rm -f tags
+	find . -name __pycache__ -type d -prune -exec rm -r {} ';'
+.PHONY: clean
