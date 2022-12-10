@@ -1,6 +1,6 @@
 VERSION = $(shell python3 -c 'from bodkin import __version__ as v; print(v, end="")')
 
-dist: $(shell find src) LICENSE pyproject.toml README.md setup.cfg
+dist: $(shell find bodkin) LICENSE pyproject.toml README.md setup.cfg
 	rm -f dist/*
 	python3 -m build
 
@@ -30,8 +30,7 @@ tags: $(shell find bodkin -iname "*.py")
 	ctags $^
 
 clean:
-	rm -rf dist
-	rm -rf *.egg-info
+	rm -rf dist build *.egg-info
 	rm -f tags
 	find . -name __pycache__ -type d -prune -exec rm -r {} ';'
 .PHONY: clean
