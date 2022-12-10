@@ -132,7 +132,7 @@ def dot_to_html(dot_src: str, title: str):
                 ["dot", "-Tsvg", dot_file.name], check=True, capture_output=True
             ).stdout
         except CalledProcessError as err:
-            raise ValueError(err.stderr) from err
+            raise CalledProcessError(err.stderr) from err
     html_src = HTML_TEMPLATE.format(
         title=title,
         style_src=STYLE_SRC,
