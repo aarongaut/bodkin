@@ -1,0 +1,32 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(16, 15, 16);
+    color: white;
+  }
+  text {
+    color: white;
+    fill: white;
+  }
+  .node polygon, .node polyline {
+    stroke: white;
+  }
+  .edge path {
+    stroke: white;
+  }
+  .edge polygon, .ref ellipse {
+    stroke: white;
+    fill: white;
+  }
+}
+
+svg .hover * {
+  stroke-width: 4px;
+}
+
+svg .selected * {
+  stroke: red;
+  stroke-width: 5px;
+}
+.selected polygon, .selected ellipse {
+  fill: red;
+}

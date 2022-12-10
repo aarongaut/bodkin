@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <style>{style_src}</style>
+  </head>
+  <body>
+    {svg_src}
+    <script>{script_src}</script>
+  </body>
+</html>
