@@ -1,4 +1,4 @@
-VERSION = $(shell python -c 'from bodkin import __version__ as v; print(v, end="")')
+VERSION = $(shell python3 -c 'from bodkin import __version__ as v; print(v, end="")')
 
 dist: $(shell find src) LICENSE pyproject.toml README.md setup.cfg
 	rm -f dist/*
